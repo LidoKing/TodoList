@@ -43,6 +43,7 @@ h1 {
 
 ::placeholder {
   color: #b3b0b0;
+  font-size: 1.3rem;
 }
 
 #button {
