@@ -63,7 +63,7 @@ h1 {
 }
 #todos li {
   list-style: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   background-color: #2f93e6;
   padding: 0.5rem 1rem;
   border-bottom: solid 1px #197dd1;
