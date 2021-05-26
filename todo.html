@@ -2,15 +2,17 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>A Banal Todo-list</title>
     <link rel="stylesheet" href="css/todo.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-    <script src="todo.js"></script>
   </head>
   <body>
     <h1>A banal todo-list</h1>
-    <input type="text" placeholder="Let's start working!">
-    <button type="button" onclick="">Add task</button>
+    <form id="form">
+      <input id="input" type="text" autocomplete="off" placeholder="Work... (Press ENTER to add task)">
+      <button id="button" type="button" name="button"></button>
+    </form>
   </body>
+
+  <script src="todo.js"></script>
 </html>
