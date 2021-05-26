@@ -11,7 +11,10 @@ input.addEventListener("keypress", event => {
 });
 
 button.addEventListener("click", () => {
-  tasks.push(input.value);
-  input.value = "";
-  console.log(tasks);
+  if(input.value != "") {
+    tasks.push(input.value);
+    input.value = "";
+  } else {
+    alert("You dont't have any tasks to add!");
+  }
 });
