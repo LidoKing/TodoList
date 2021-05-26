@@ -28,7 +28,7 @@ h1 {
 #input {
   border: none;
   background-color: #004c8b;
-  border-radius: 0.3rem;
+  border-radius: 0.3rem 0 0 0.3rem;
   width: 45rem;
   height: 3rem;
   color: #b3b0b0;
@@ -37,13 +37,22 @@ h1 {
   letter-spacing: 0.2rem;
 }
 
+#input:focus {
+  outline: none;
+}
+
 ::placeholder {
   color: #b3b0b0;
 }
 
 #button {
-  display: hidden;
   border: none;
+  height: 3rem;
+  width: 5rem;
+  border-radius: 0 0.3rem 0.3rem 0;
+  margin-left: -4px;
+  background-color: white;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=todo.css.map */
