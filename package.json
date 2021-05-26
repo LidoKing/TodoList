@@ -1,0 +1,12 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "Dumbass todo list",
+  "main": "todo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass -w todo.sass css/todo.css"
+  },
+  "author": "LidoKing",
+  "license": "ISC"
+}
