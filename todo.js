@@ -16,14 +16,20 @@ button.addEventListener("click", () => {
   if(input.value != "") {
     // Back-end oprations
     tasks.push(input.value);
-    localStorage.setItem("savedTasks", tasks);
+    localStorage.setItem("savedTasks", JSON.stringify(tasks)); // localStorage only supports strings
 
     // Front-end update
-    let task = `<li>${input.value}</li>`;
-    todos.innerHTML += task;
+    todos.innerHTML += `<li>${input.value}</li>`;
 
     input.value = "";
   } else {
     alert("You dont't have any tasks to add!");
   }
 });
+
+window.onload = () => {
+  let savedTasks = JSON.parse(localStorage.getItem("savedTasks")); // convert string back to array
+  savedTasks.forEach(task => {
+    todos.innerHTML += `<li>${task}</li>`;
+  });
+}
