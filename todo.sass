@@ -13,20 +13,20 @@ body
   flex-direction: column
   justify-content: center
   align-items: center
-  width: 100vw
-  height: 100vh
 
-h1
+.header
   text-transform: capitalize
   font-size: 4rem
   text-align: center
-  margin-bottom: 1rem
+  margin: 1rem 0
+  animation: bounceInDown
+  animation-delay: .5s
 
 #input
   border: none
   background-color: #004c8b
   border-radius: .3rem 0 0 .3rem
-  width: 45rem
+  width: 42rem
   height: 3rem
   color: #b3b0b0
   font-size: 1.5rem
@@ -39,7 +39,7 @@ h1
   color: #b3b0b0
   font-size: 1.3rem
 
-#button
+#addBtn
   border: none
   height: 3rem
   width: 5rem
@@ -49,7 +49,7 @@ h1
   font-size: 1.5rem
 
 #todos
-  width: 52rem
+  width: 49rem
   margin-top: 2rem
 
   li
@@ -57,4 +57,33 @@ h1
     font-size: 1.8rem
     background-color: #2f93e6
     padding: .5rem 1rem
-    border-bottom: solid 1px #197dd1
+    border-bottom: solid 1.5px #197dd1
+    cursor: pointer
+    &:hover
+      background-color: #2a86d2
+      transition: .5s
+
+.manageTasks
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+
+#clearBtn
+  border-radius: 2rem
+  margin-top: 2rem
+  border: solid 2px white
+  font-size: 1.5rem
+  color: white
+  background-color: transparent
+  padding: .5rem 2rem
+  cursor: pointer
+  text-align: center
+  &:hover
+    background-color: white
+    color: black
+    transition: .3s
+
+.crossedOut
+  text-decoration: line-through solid white 2px
+  background-color: #2a86d2 !important
