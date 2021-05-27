@@ -21,7 +21,7 @@ addBtn.addEventListener("click", () => {
     localStorage.setItem("savedTasks", JSON.stringify(tasks)); // localStorage only supports strings
 
     // Front-end update
-    todos.innerHTML += `<li onclick="crossout(this)">${input.value}</li>`; // Use 'this' to get the li element that called function
+    todos.innerHTML += `<li onclick="crossout(event)">${input.value}</li>`; // Use 'this' to get the li element that called function
 
     input.value = "";
   } else {
@@ -35,12 +35,11 @@ clearBtn.addEventListener("click", () => {
   tasks = [];
 });
 
-function crossout(elem) {
-  let indexOfTask = tasks.indexOf(elem.textContent);
-  if(task[indexOfTask].classList.contains("crossedOut")) {
-    task[indexOfTask].classList.remove("crossedOut");
+function crossout(event) {
+  if(event.target.classList.contains("crossedOut")) {
+    event.target.classList.remove("crossedOut");
   } else {
-    task[indexOfTask].classList.add("crossedOut");
+    event.target.classList.add("crossedOut");
   }
 }
 
@@ -49,7 +48,7 @@ window.onload = () => {
     tasks = JSON.parse(localStorage.getItem("savedTasks"));
     let savedTasks = JSON.parse(localStorage.getItem("savedTasks")); // convert string back to array
     savedTasks.forEach(item => {
-      todos.innerHTML += `<li onclick="crossout(this)">${item}<span class="removeTask">x</span></li>`;
+      todos.innerHTML += `<li onclick="crossout(event)">${item}</li>`;
     });
   } else {
     localStorage.setItem("savedTasks", JSON.stringify(tasks));
