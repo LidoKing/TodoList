@@ -56,12 +56,26 @@ body
     list-style: none
     font-size: 1.8rem
     background-color: #2f93e6
-    padding: .5rem 1rem
+    padding: 0 1rem
     border-bottom: solid 1.5px #197dd1
     cursor: pointer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 4rem
     &:hover
       background-color: #2a86d2
       transition: .5s
+
+    .removeTask
+      padding: 0 .5rem
+      &:hover
+        font-size: 3rem
+        transition: .5s
+
+  .crossedOut
+    text-decoration: line-through solid white 2px
+    background-color: #2a86d2 !important
 
 .manageTasks
   display: flex
@@ -83,7 +97,3 @@ body
     background-color: white
     color: black
     transition: .3s
-
-.crossedOut
-  text-decoration: line-through solid white 2px
-  background-color: #2a86d2 !important
